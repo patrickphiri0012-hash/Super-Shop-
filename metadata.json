@@ -1,0 +1,6 @@
+{
+  "name": "Supper Shop",
+  "description": "A premium online gourmet suppers and fresh organic groceries ordering marketplace. Features checkout, loyalty wallets, live-moving delivery maps, and admin inventory consoles.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
