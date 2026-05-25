@@ -149,20 +149,20 @@ export default function Storefront({
     <div id="storefront-container" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 animate-fade-in">
       
       {/* 1. Hero Promo Section */}
-      <section id="storefront-hero" className="relative rounded-3xl overflow-hidden bg-radial-at-br from-neutral-900 via-neutral-950 to-neutral-900 text-white mb-10 p-8 sm:p-12 lg:p-16 border border-neutral-800 shadow-xl">
-        <div className="absolute top-0 right-0 w-80 h-80 bg-amber-500/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-80 h-80 bg-rose-500/10 rounded-full blur-3xl" />
+      <section id="storefront-hero" className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 text-white mb-10 p-8 sm:p-12 lg:p-16 border border-slate-800 shadow-xl">
+        <div className="absolute top-0 right-0 w-80 h-80 bg-emerald-500/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-80 h-80 bg-teal-500/10 rounded-full blur-3xl" />
         
         <div className="relative max-w-xl z-10">
-          <span className="inline-flex items-center gap-1 bg-amber-500/20 text-amber-400 text-xs font-semibold px-3 py-1.5 rounded-full mb-6 uppercase tracking-wider">
-            <Sparkles className="w-3 h-3" /> Chef’s Midnight Collection
+          <span className="inline-flex items-center gap-1 bg-emerald-500/20 text-emerald-400 text-xs font-bold px-3 py-1.5 rounded-full mb-6 uppercase tracking-wider">
+            <Sparkles className="w-3 h-3" /> Chef’s Seasonal Selection
           </span>
-          <h2 className="text-3.5xl sm:text-5xl font-extrabold tracking-tight leading-tight">
+          <h2 className="text-3.5xl sm:text-5xl font-black tracking-tight leading-tight">
             Elevate Your Supper. <br />
-            <span className="text-amber-500">Delivered Fresh.</span>
+            <span className="text-emerald-500">Delivered Fresh.</span>
           </h2>
-          <p className="mt-4 text-base text-gray-300 leading-relaxed font-sans">
-            Freshly processed farm-harvest ingredients and professional chef-prepared meals. Speed delivered within your local micro-zoned neighborhood.
+          <p className="mt-4 text-sm sm:text-base text-slate-350 leading-relaxed font-sans font-light">
+            Freshly processed farm-to-table ingredients and professional chef-prepared meals. Delivery speed zoned within your local micro-neighborhood.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <button
@@ -170,7 +170,7 @@ export default function Storefront({
                 setSelectedCategory('Gourmet Suppers');
                 document.getElementById('catalog')?.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="px-6 py-3 bg-amber-500 text-neutral-950 font-bold rounded-xl shadow-lg hover:bg-amber-400 transition-all duration-200 flex items-center gap-2"
+              className="px-6 py-3 bg-emerald-600 text-white font-bold rounded-xl shadow-lg hover:bg-emerald-500 active:translate-y-px transition-all duration-200 flex items-center gap-2 text-sm"
             >
               Order Gourmet Suppers <ArrowRight className="w-4 h-4" />
             </button>
@@ -179,7 +179,7 @@ export default function Storefront({
                 setSelectedCategory('Fresh Groceries');
                 document.getElementById('catalog')?.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="px-6 py-3 bg-neutral-800 text-white border border-neutral-700 font-semibold rounded-xl hover:bg-neutral-700 transition-all duration-200"
+              className="px-6 py-3 bg-slate-800 text-slate-205 border border-slate-705 font-semibold rounded-xl hover:bg-slate-700 transition-all duration-200 text-sm"
             >
               Browse Groceries
             </button>
@@ -187,34 +187,34 @@ export default function Storefront({
         </div>
 
         {/* Floating Best Seller Badge */}
-        <div className="absolute bottom-6 right-6 hidden lg:flex items-center gap-3 bg-neutral-900/90 backdrop-blur-md p-4 rounded-2xl border border-neutral-800 shadow-lg">
+        <div className="absolute bottom-6 right-6 hidden lg:flex items-center gap-3 bg-slate-900/90 backdrop-blur-md p-4 rounded-2xl border border-slate-800 shadow-lg">
           <span className="text-3xl">🥩</span>
           <div>
-            <p className="text-xs text-amber-500 uppercase tracking-widest font-extrabold font-mono">Today’s Top Choice</p>
+            <p className="text-xs text-emerald-400 uppercase tracking-widest font-extrabold font-mono">Today’s Top Choice</p>
             <h4 className="text-sm font-semibold text-white">Gourmet Truffle Ribeye</h4>
-            <p className="text-xs text-gray-400">300g choice cuts • Slashed to $29.99</p>
+            <p className="text-xs text-slate-400">300g choice cuts • Slashed to $29.99</p>
           </div>
         </div>
       </section>
 
       {/* 2. Deals Countdown Bar */}
       {dealsProducts.length > 0 && (
-        <section id="deals-countdown-section" className="mb-12 bg-rose-50 border border-rose-100 rounded-2xl p-6">
+        <section id="deals-countdown-section" className="mb-12 bg-slate-50 border border-slate-150 rounded-2xl p-6">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
             <div className="flex items-center gap-3">
-              <div className="p-2.5 bg-rose-500 text-white rounded-xl animate-pulse">
+              <div className="p-2.5 bg-emerald-600 text-white rounded-xl animate-pulse">
                 <Flame className="w-5 h-5" />
               </div>
               <div>
-                <h3 className="text-lg font-extrabold text-neutral-900 tracking-tight">Flash Gourmet Suppers Deals</h3>
-                <p className="text-sm text-neutral-600">Premium recipes at limited discounted prices. Grab yours!</p>
+                <h3 className="text-lg font-black text-slate-900 tracking-tight">Flash Gourmet Handcrafted Specials</h3>
+                <p className="text-sm text-slate-500">Premium chef kitchen recipes at limited friendly prices.</p>
               </div>
             </div>
             <div className="flex items-center gap-2.5 ml-0 md:ml-auto">
-              <span className="text-xs font-semibold text-rose-700 uppercase tracking-widest bg-rose-100 px-3 py-1.5 rounded-lg flex items-center gap-1">
-                <Clock className="w-3.5 h-3.5" /> Ending In:
+              <span className="text-xs font-semibold text-slate-600 uppercase tracking-widest bg-slate-205/50 px-3 py-1.5 rounded-lg flex items-center gap-1">
+                <Clock className="w-3.5 h-3.5 text-emerald-600" /> Ending In:
               </span>
-              <div className="font-mono font-black text-xl text-amber-600 tracking-wider bg-neutral-950 px-3.5 py-1.5 rounded-lg border border-neutral-800 shadow-inner">
+              <div className="font-mono font-bold text-lg text-emerald-400 tracking-wider bg-slate-950 px-3.5 py-1.5 rounded-lg border border-slate-800 shadow-inner">
                 {formatTime(timeLeft)}
               </div>
             </div>
@@ -228,14 +228,14 @@ export default function Storefront({
                 <div 
                   key={`deal-${p.id}`} 
                   onClick={() => setSelectedProduct(p)}
-                  className="bg-white border border-rose-100 rounded-xl p-4 flex gap-4 items-center cursor-pointer hover:border-rose-300 transition-all focus:ring-2 focus:ring-rose-500/20 shadow-xs group"
+                  className="bg-white border border-slate-100 rounded-xl p-4 flex gap-4 items-center cursor-pointer hover:border-emerald-300 transition-all hover:bg-slate-50/20 shadow-xs group"
                 >
                   <div className={`w-16 h-16 rounded-xl flex items-center justify-center text-3xl shrink-0 bg-gradient-to-tr ${getProductGradient(p.category)}`}>
                     {p.image}
                   </div>
                   <div className="min-w-0">
-                    <span className="text-[10px] bg-rose-500 text-white font-bold px-2 py-0.5 rounded-sm">-{discountPercent}% OFF</span>
-                    <h4 className="text-sm font-bold text-neutral-900 truncate mt-1 group-hover:text-amber-600">{p.name}</h4>
+                    <span className="text-[10px] bg-emerald-600 text-white font-semibold px-2 py-0.5 rounded-xs">-{discountPercent}% OFF</span>
+                    <h4 className="text-sm font-bold text-neutral-900 truncate mt-1 group-hover:text-emerald-600">{p.name}</h4>
                     <div className="flex items-center gap-2 mt-1">
                       <span className="text-sm font-black text-neutral-950">${p.dealPrice?.toFixed(2)}</span>
                       <span className="text-xs text-gray-400 line-through">${p.price.toFixed(2)}</span>
@@ -262,8 +262,8 @@ export default function Storefront({
                 onClick={() => setSelectedCategory(cat)}
                 className={`px-4 py-2 rounded-xl text-xs font-bold tracking-tight whitespace-nowrap transition-all duration-200 shrink-0 ${
                   selectedCategory === cat
-                    ? 'bg-neutral-900 text-white shadow-md'
-                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                    ? 'bg-emerald-600 text-white shadow-sm'
+                    : 'bg-slate-100 text-slate-650 hover:bg-slate-200/60'
                 }`}
               >
                 {cat}
@@ -279,7 +279,7 @@ export default function Storefront({
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
-              className="bg-white text-xs font-bold text-neutral-900 border border-gray-200 rounded-xl px-3 py-2 focus:outline-hidden focus:ring-2 focus:ring-amber-500/20"
+              className="bg-white text-xs font-bold text-slate-900 border border-slate-200 rounded-xl px-3 py-2 focus:outline-hidden focus:ring-4 focus:ring-emerald-500/10 focus:border-emerald-500"
             >
               <option value="featured">Featured Picks</option>
               <option value="price-asc">Price: Low to High</option>
@@ -292,9 +292,9 @@ export default function Storefront({
 
         {/* Search status summary if viewing searches */}
         {searchQuery && (
-          <div className="mt-4 text-sm text-gray-500">
-            Found <span className="font-bold text-neutral-900">{sortedProducts.length}</span> results for &ldquo;<span className="text-amber-600 font-semibold">{searchQuery}</span>&rdquo;.
-            <button onClick={() => setSearchQuery('')} className="ml-2 text-xs text-blue-500 font-semibold underline hover:text-blue-700">Clear</button>
+          <div className="mt-4 text-sm text-slate-500">
+            Found <span className="font-bold text-slate-950">{sortedProducts.length}</span> results for &ldquo;<span className="text-emerald-600 font-semibold">{searchQuery}</span>&rdquo;.
+            <button onClick={() => setSearchQuery('')} className="ml-2 text-xs text-emerald-600 font-bold underline hover:text-emerald-850">Clear</button>
           </div>
         )}
       </section>
@@ -302,13 +302,13 @@ export default function Storefront({
       {/* 4. Products Grid */}
       <section id="products-catalog-grid" className="mb-16">
         {sortedProducts.length === 0 ? (
-          <div className="text-center py-20 bg-gray-50 border border-dashed border-gray-200 rounded-3xl">
-            <div className="inline-flex p-4 bg-amber-50 rounded-full text-amber-500 text-3xl mb-4">🍽️</div>
-            <h3 className="text-lg font-bold text-neutral-900">No dishes or ingredients matches found</h3>
-            <p className="text-sm text-gray-500 mt-1 max-w-sm mx-auto">Try broadening your queries or selecting &ldquo;All&rdquo; categories filters.</p>
+          <div className="text-center py-20 bg-slate-50 border border-dashed border-slate-200 rounded-3xl">
+            <div className="inline-flex p-4 bg-emerald-50 rounded-full text-emerald-600 text-3xl mb-4">🍽️</div>
+            <h3 className="text-lg font-bold text-slate-900">No dishes or ingredients matches found</h3>
+            <p className="text-sm text-slate-500 mt-1 max-w-sm mx-auto font-light">Try broadening your queries or selecting &ldquo;All&rdquo; categories filters.</p>
             <button 
               onClick={() => { setSelectedCategory('All'); setSearchQuery(''); }}
-              className="mt-4 px-5 py-2.5 bg-neutral-900 text-white rounded-xl text-xs font-bold shadow-xs hover:bg-neutral-800"
+              className="mt-4 px-5 py-2.5 bg-slate-900 hover:bg-emerald-600 text-white rounded-xl text-xs font-bold transition-colors cursor-pointer"
             >
               Reset All Filters
             </button>
@@ -348,8 +348,8 @@ export default function Storefront({
 
                       {/* Best Seller Ring */}
                       {p.isBestSeller && (
-                        <span className="absolute bottom-3 left-3 bg-neutral-950 text-white text-[9px] font-black tracking-widest uppercase px-2.5 py-1 rounded-sm flex items-center gap-1 shadow-md">
-                          <Flame className="w-2.5 h-2.5 text-amber-500" /> Bestseller
+                        <span className="absolute bottom-3 left-3 bg-slate-950 text-white text-[9px] font-bold tracking-widest uppercase px-2.5 py-1 rounded-xs flex items-center gap-1 shadow-md">
+                          <Flame className="w-2.5 h-2.5 text-emerald-400" /> Bestseller
                         </span>
                       )}
                     </div>
@@ -357,29 +357,29 @@ export default function Storefront({
                     {/* Metadata Section */}
                     <div className="mt-4">
                       <div className="flex items-center justify-between">
-                        <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#2f3e46]">{p.category}</span>
-                        <span className="text-xs text-gray-500 font-mono">{p.brand}</span>
+                        <span className="text-[10px] font-bold uppercase tracking-widest text-[#2f3e46]">{p.category}</span>
+                        <span className="text-xs text-slate-400 font-mono">{p.brand}</span>
                       </div>
                       
                       <h3 
                         onClick={() => setSelectedProduct(p)}
-                        className="text-base font-extrabold text-neutral-900 mt-1 cursor-pointer group-hover:text-amber-500 transition-colors duration-200 line-clamp-1"
+                        className="text-base font-black text-slate-900 mt-1 cursor-pointer group-hover:text-emerald-600 transition-colors duration-250 line-clamp-1"
                       >
                         {p.name}
                       </h3>
                       
                       {/* Rating stars display */}
                       <div className="flex items-center gap-1 mt-1.5">
-                        <div className="flex text-amber-400">
+                        <div className="flex text-amber-450">
                           {Array.from({ length: 5 }).map((_, i) => (
                             <Star 
                               key={`star-card-${p.id}-${i}`}
-                              className={`w-3 h-3 ${Math.round(p.rating) > i ? 'fill-amber-400 text-amber-400' : 'text-gray-200'}`} 
+                              className={`w-3 h-3 ${Math.round(p.rating) > i ? 'fill-amber-400 text-amber-400' : 'text-slate-200'}`} 
                             />
                           ))}
                         </div>
-                        <span className="text-xs font-bold text-neutral-800">{p.rating}</span>
-                        <span className="text-[10px] text-gray-400">({p.reviewsCount})</span>
+                        <span className="text-xs font-bold text-slate-800">{p.rating}</span>
+                        <span className="text-[10px] text-slate-400">({p.reviewsCount})</span>
                       </div>
 
                       <p className="text-xs text-gray-500 mt-2 line-clamp-2 leading-relaxed">
@@ -411,9 +411,9 @@ export default function Storefront({
                       onClick={() => {
                         setSelectedProduct(p);
                       }}
-                      className="inline-flex items-center gap-1 px-4 py-2 bg-neutral-950 hover:bg-amber-500 hover:text-neutral-950 text-white font-bold text-xs rounded-xl transition-all duration-200 shadow-xs cursor-pointer group-hover:shadow-md"
+                      className="inline-flex items-center gap-1 px-4 py-2 bg-slate-900 hover:bg-emerald-600 text-white font-bold text-xs rounded-xl transition-all duration-300 shadow-xs cursor-pointer group-hover:shadow-sm"
                     >
-                      <Plus className="w-3.5 h-3.5" /> Order / Customize
+                      <Plus className="w-3.5 h-3.5" /> Order & Customize
                     </button>
                   </div>
 
@@ -442,11 +442,11 @@ export default function Storefront({
             <div 
               key={`brand-${idx}`} 
               onClick={() => setSearchQuery(brand.name.split(' ')[0])}
-              className="bg-gray-50 border border-gray-100 hover:border-amber-300 hover:bg-amber-50/50 rounded-2xl p-4 text-center cursor-pointer transition-all duration-200 group"
+              className="bg-slate-50/50 border border-slate-100/80 hover:border-emerald-250 hover:bg-emerald-50/10 rounded-2xl p-4 text-center cursor-pointer transition-all duration-300 group shadow-xs"
             >
-              <span className="text-3xl filter group-hover:scale-110 transition-transform duration-200 inline-block mb-2">{brand.icon}</span>
-              <h4 className="text-xs font-bold text-neutral-900 group-hover:text-amber-800">{brand.name}</h4>
-              <p className="text-[10px] text-gray-400 mt-1 leading-tight">{brand.tag}</p>
+              <span className="text-3xl filter group-hover:scale-110 transition-transform duration-300 inline-block mb-2">{brand.icon}</span>
+              <h4 className="text-xs font-bold text-slate-800 group-hover:text-emerald-700">{brand.name}</h4>
+              <p className="text-[10px] text-slate-400 mt-1 leading-tight">{brand.tag}</p>
             </div>
           ))}
         </div>
@@ -514,19 +514,19 @@ export default function Storefront({
                 <div className="flex border-b border-gray-150 mt-6 gap-6 text-xs font-extrabold tracking-wider uppercase text-gray-400">
                   <button 
                     onClick={() => setReviewTab('desc')}
-                    className={`pb-2.5 outline-hidden border-b-2 ${reviewTab === 'desc' ? 'border-amber-500 text-neutral-950' : 'hover:text-neutral-700'}`}
+                    className={`pb-2.5 outline-hidden border-b-2 ${reviewTab === 'desc' ? 'border-emerald-600 text-slate-900' : 'hover:text-slate-700'}`}
                   >
                     Culinary Info
                   </button>
                   <button 
                     onClick={() => setReviewTab('nutrition')}
-                    className={`pb-2.5 outline-hidden border-b-2 ${reviewTab === 'nutrition' ? 'border-amber-500 text-neutral-950' : 'hover:text-neutral-700'}`}
+                    className={`pb-2.5 outline-hidden border-b-2 ${reviewTab === 'nutrition' ? 'border-emerald-600 text-slate-900' : 'hover:text-slate-700'}`}
                   >
                     Nutrition Facts
                   </button>
                   <button 
                     onClick={() => setReviewTab('reviews')}
-                    className={`pb-2.5 outline-hidden border-b-2 ${reviewTab === 'reviews' ? 'border-amber-500 text-neutral-950' : 'hover:text-neutral-700'}`}
+                    className={`pb-2.5 outline-hidden border-b-2 ${reviewTab === 'reviews' ? 'border-emerald-600 text-slate-900' : 'hover:text-slate-700'}`}
                   >
                     Guest Reviews ({reviewsList.length})
                   </button>
@@ -540,7 +540,7 @@ export default function Storefront({
                       
                       <div className="flex flex-wrap gap-2 pt-2">
                         {selectedProduct.tags.map((tag, idx) => (
-                          <span key={`tag-${idx}`} className="text-[10px] bg-neutral-900 text-amber-400 font-black tracking-widest px-2.5 py-1 rounded-sm uppercase">
+                          <span key={`tag-${idx}`} className="text-[10px] bg-slate-950 text-emerald-400 font-semibold tracking-widest px-2.5 py-1 rounded-sm uppercase">
                             #{tag}
                           </span>
                         ))}
@@ -558,11 +558,11 @@ export default function Storefront({
                         </div>
                         <div className="p-2.5 bg-white border border-gray-100 rounded-xl shadow-xs">
                           <p className="text-xs text-gray-500">Proteins</p>
-                          <span className="text-sm font-black text-[#52796f]">{selectedProduct.nutrition.protein}</span>
+                          <span className="text-sm font-black text-emerald-600">{selectedProduct.nutrition.protein}</span>
                         </div>
                         <div className="p-2.5 bg-white border border-gray-100 rounded-xl shadow-xs">
                           <p className="text-xs text-gray-500">Carbs</p>
-                          <span className="text-sm font-black text-[#f4a261]">{selectedProduct.nutrition.carbs}</span>
+                          <span className="text-sm font-black text-slate-500">{selectedProduct.nutrition.carbs}</span>
                         </div>
                         <div className="p-2.5 bg-white border border-gray-100 rounded-xl shadow-xs">
                           <p className="text-xs text-gray-500">Lipid Fat</p>
@@ -577,17 +577,17 @@ export default function Storefront({
                       {/* Guest Reviews list */}
                       <div className="space-y-3.5 max-h-[160px] overflow-y-auto pr-2 scrollbar-thin">
                         {reviewsList.length === 0 ? (
-                          <p className="text-xs text-gray-400 italic">No reviews yet for this gourmet dish. Be the first!</p>
+                           <p className="text-xs text-gray-400 italic font-light">No reviews yet for this gourmet dish. Be the first!</p>
                         ) : (
                           reviewsList.map((rev) => (
                             <div key={rev.id} className="bg-gray-50/55 p-3 rounded-xl border border-gray-100/80">
                               <div className="flex items-center justify-between text-xs">
-                                <span className="font-bold text-neutral-900">{rev.userName}</span>
+                                <span className="font-bold text-neural-905">{rev.userName}</span>
                                 <span className="text-gray-400">{rev.date}</span>
                               </div>
-                              <div className="flex text-amber-400 text-xs mt-0.5">
+                              <div className="flex text-emerald-605 text-xs mt-0.5">
                                 {Array.from({ length: 5 }).map((_, i) => (
-                                  <Star key={i} className={`w-3 h-3 ${rev.rating > i ? 'fill-amber-400 text-amber-400' : 'text-gray-200'}`} />
+                                  <Star key={i} className={`w-3 h-3 ${rev.rating > i ? 'fill-emerald-500 text-emerald-500' : 'text-slate-200'}`} />
                                 ))}
                               </div>
                               <p className="text-xs text-gray-650 mt-1 leading-normal">&ldquo;{rev.comment}&rdquo;</p>
@@ -598,21 +598,21 @@ export default function Storefront({
 
                       {/* Fast review adding form */}
                       <form onSubmit={handleAddReview} className="border-t border-gray-100 pt-3.5">
-                        <h4 className="text-xs font-bold text-neutral-900 mb-2">Write a Verified Guest Review</h4>
+                        <h4 className="text-xs font-bold text-slate-900 mb-2">Write a Verified Guest Review</h4>
                         <div className="grid grid-cols-2 gap-3 mb-2">
                           <input 
                             type="text" 
                             placeholder="Your Name" 
                             value={newReviewAuthor} 
                             onChange={(e) => setNewReviewAuthor(e.target.value)} 
-                            className="bg-gray-50 text-xs rounded-lg px-3 py-2 outline-hidden border border-gray-200 focus:ring-1 focus:ring-amber-500" 
+                            className="bg-gray-50 text-xs rounded-lg px-3 py-2 outline-hidden border border-gray-200 focus:ring-1 focus:ring-emerald-500 focus:border-emerald-500" 
                           />
                           <div className="flex items-center gap-1.5 justify-end">
                             <span className="text-[10px] text-gray-400 font-bold">Rating:</span>
                             <select 
                               value={newReviewRating} 
                               onChange={(e) => setNewReviewRating(parseInt(e.target.value))} 
-                              className="bg-gray-50 text-xs rounded-lg px-2 py-1.5 focus:outline-hidden"
+                              className="bg-gray-50 text-xs rounded-lg px-2 py-1.5 focus:outline-hidden border border-gray-200"
                             >
                               <option value="5">5 Stars ⭐⭐⭐⭐⭐</option>
                               <option value="4">4 Stars ⭐⭐⭐⭐</option>
@@ -628,11 +628,11 @@ export default function Storefront({
                             placeholder="Share your dining thoughts..." 
                             value={newReviewComment}
                             onChange={(e) => setNewReviewComment(e.target.value)}
-                            className="w-full bg-gray-50 text-xs rounded-lg px-3.5 py-2 border border-gray-200 focus:outline-hidden focus:ring-1 focus:ring-amber-500"
+                            className="w-full bg-gray-50 text-xs rounded-lg px-3.5 py-2 border border-gray-200 focus:outline-hidden focus:ring-1 focus:ring-emerald-500"
                           />
                           <button 
                             type="submit" 
-                            className="bg-neutral-900 hover:bg-neutral-800 text-white font-extrabold text-xs px-4 rounded-lg"
+                            className="bg-slate-900 hover:bg-emerald-600 text-white font-bold text-xs px-4 rounded-lg cursor-pointer transition-colors"
                           >
                             Submit
                           </button>
@@ -653,7 +653,7 @@ export default function Storefront({
                           onClick={() => setCustomWeight(wOpt)}
                           className={`px-3.5 py-2 text-xs font-bold rounded-xl border transition-all ${
                             customWeight === wOpt
-                              ? 'border-neutral-900 bg-neutral-900 text-white shadow-xs'
+                              ? 'border-slate-900 bg-slate-900 text-white shadow-xs'
                               : 'border-gray-200 text-neutral-800 bg-white hover:bg-gray-50'
                           }`}
                         >
@@ -672,7 +672,7 @@ export default function Storefront({
                     placeholder="e.g. Extra dressing, medium rare steak, keep sauce separate"
                     value={customNotes}
                     onChange={(e) => setCustomNotes(e.target.value)}
-                    className="w-full bg-gray-50 text-xs px-3.5 py-2.5 rounded-xl border border-gray-200 placeholder-gray-400 text-neutral-900 focus:outline-hidden focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 transition-all font-sans"
+                    className="w-full bg-gray-50 text-xs px-3.5 py-2.5 rounded-xl border border-gray-200 placeholder-gray-400 text-slate-900 focus:outline-hidden focus:border-emerald-500 focus:ring-4 focus:ring-emerald-500/10 transition-all font-sans"
                   />
                 </div>
               </div>
@@ -681,7 +681,7 @@ export default function Storefront({
               <div className="mt-8 border-t border-gray-150 pt-5 flex items-center justify-between gap-4 bg-white">
                 <div>
                   <span className="text-[10px] text-gray-400 font-extrabold uppercase tracking-widest">Calculated Subtotal</span>
-                  <div className="text-2.5xl font-extrabold text-neutral-950 font-sans mt-0.5">
+                  <div className="text-2.5xl font-extrabold text-slate-950 font-sans mt-0.5">
                     ${((selectedProduct.isDeal && selectedProduct.dealPrice ? selectedProduct.dealPrice : selectedProduct.price) * customQty).toFixed(2)}
                   </div>
                 </div>
@@ -711,7 +711,7 @@ export default function Storefront({
                       addToCart(selectedProduct, customQty, customWeight, customNotes);
                       setSelectedProduct(null);
                     }}
-                    className="inline-flex items-center gap-2 px-5 py-3.5 bg-amber-500 text-neutral-950 rounded-xl font-extrabold text-sm hover:bg-amber-400 shadow-md transform hover:-translate-y-0.5 transition-all cursor-pointer"
+                    className="inline-flex items-center gap-2 px-5 py-3.5 bg-emerald-600 text-white rounded-xl font-bold text-sm hover:bg-emerald-500 shadow-xs hover:-translate-y-0.5 transition-all cursor-pointer"
                   >
                     <ShoppingBag className="w-4 h-4" /> Add To Shopping List
                   </button>

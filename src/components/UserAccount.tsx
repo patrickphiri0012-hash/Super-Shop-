@@ -127,21 +127,21 @@ export default function UserAccount({
     <div id="user-account-workspace" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 animate-fade-in">
       
       {/* 1. Profile Status Dashboard Hub */}
-      <section id="profile-heading" className="bg-white border border-gray-100 rounded-3xl p-6 mb-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xs relative">
-        <div className="absolute top-0 right-0 w-48 h-full bg-amber-500/5 rounded-r-3xl pointer-events-none" />
+      <section id="profile-heading" className="bg-slate-50 border border-slate-100/80 rounded-3xl p-6 mb-8 flex flex-col md:flex-row items-center justify-between gap-6 relative">
+        <div className="absolute top-0 right-0 w-48 h-full bg-emerald-500/5 rounded-r-3xl pointer-events-none" />
         
         <div className="flex flex-col sm:flex-row items-center gap-5">
           <div className="relative">
-            <div className="w-20 h-20 rounded-full border-4 border-amber-400 overflow-hidden shadow-md">
+            <div className="w-20 h-20 rounded-full border-4 border-emerald-600 overflow-hidden shadow-xs">
               <img referrerPolicy="no-referrer" src={user.avatar} alt={user.name} className="w-full h-full object-cover" />
             </div>
-            <span className="absolute -bottom-1 -right-1 bg-amber-500 text-neutral-950 p-1.5 rounded-full border-2 border-white text-xs font-black" title="Membership Level">
+            <span className="absolute -bottom-1 -right-1 bg-emerald-600 text-white p-1.5 rounded-full border-2 border-white text-xs font-bold" title="Membership Level">
               <Award className="w-4 h-4" />
             </span>
           </div>
 
           <div className="text-center sm:text-left">
-            <span className="text-[10px] bg-amber-100 text-amber-950 font-black px-3 py-1 rounded-full uppercase tracking-wider">
+            <span className="text-[10px] bg-emerald-50 text-emerald-800 font-bold px-3 py-1 rounded-full uppercase tracking-wider">
               {user.tier} Membership Tier
             </span>
             <h2 className="text-2xl font-extrabold text-neutral-900 mt-1">{user.name}</h2>
@@ -158,7 +158,7 @@ export default function UserAccount({
           <div className="w-full bg-gray-100 rounded-full h-3 border border-gray-200 overflow-hidden p-0.5 shadow-inner">
             <div 
               style={{ width: `${percentageToNext}%` }} 
-              className="bg-amber-400 h-full rounded-full transition-all duration-500" 
+              className="bg-emerald-600 h-full rounded-full transition-all duration-500" 
             />
           </div>
           <p className="text-[10px] text-gray-400 text-center md:text-right font-medium">
@@ -194,11 +194,11 @@ export default function UserAccount({
                 }`}
               >
                 <span className="flex items-center gap-2.5">
-                  <Icon className={`w-4 h-4 ${subTab === nav.id ? 'text-amber-400' : 'text-gray-400'}`} />
+                  <Icon className={`w-4 h-4 ${subTab === nav.id ? 'text-emerald-400' : 'text-slate-400'}`} />
                   {nav.label}
                 </span>
                 {nav.badge !== undefined && nav.badge > 0 && (
-                  <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${subTab === nav.id ? 'bg-amber-500 text-neutral-950' : 'bg-gray-100 text-gray-700'}`}>
+                  <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${subTab === nav.id ? 'bg-emerald-600 text-white' : 'bg-gray-100 text-gray-700'}`}>
                     {nav.badge}
                   </span>
                 )}
@@ -222,24 +222,24 @@ export default function UserAccount({
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 
                 {/* Fast shortcut list */}
-                <div className="border border-gray-150 rounded-2xl p-4 bg-amber-50/50">
-                  <h4 className="text-sm font-bold text-neutral-900 mb-3 flex items-center gap-1.5">
-                    <Gift className="w-4 h-4 text-amber-500" /> Executive Privileges
+                <div className="border border-emerald-100 rounded-2xl p-4 bg-emerald-50/30">
+                  <h4 className="text-sm font-bold text-slate-900 mb-3 flex items-center gap-1.5">
+                    <Gift className="w-4 h-4 text-emerald-600" /> Executive Privileges
                   </h4>
-                  <ul className="space-y-2.5 text-xs text-neutral-700">
+                  <ul className="space-y-2.5 text-xs text-slate-705">
                     <li className="flex items-center gap-2">
-                      <span className="text-amber-500">✔</span> Double Points on special Gourmet Suppers deals is active.
+                      <span className="text-emerald-600 font-bold">✔</span> Double Points on special Gourmet Suppers deals is active.
                     </li>
                     <li className="flex items-center gap-2">
-                      <span className="text-amber-500">✔</span> Complimentary organic lime-juices added automatically to orders above $60.
+                      <span className="text-emerald-600 font-bold">✔</span> Complimentary organic lime-juices added automatically to orders above $60.
                     </li>
                     <li className="flex items-center gap-2">
-                      <span className="text-amber-500">✔</span> Fast priority rider dispatch inside active metropolitan suburbs.
+                      <span className="text-emerald-600 font-bold">✔</span> Fast priority rider dispatch inside active metropolitan suburbs.
                     </li>
                   </ul>
                   <button 
                     onClick={() => setSubTab('loyalty')}
-                    className="mt-4 text-xs font-bold text-amber-950 bg-amber-200 hover:bg-amber-300 px-3 py-1.5 rounded-lg flex items-center gap-1"
+                    className="mt-4 text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 px-3 py-1.5 rounded-lg flex items-center gap-1 cursor-pointer"
                   >
                     Go Exchange point-vouchers <ChevronRight className="w-3 h-3" />
                   </button>
@@ -270,11 +270,11 @@ export default function UserAccount({
 
               </div>
 
-              {/* Feed recent activity orders history */}
+               {/* Feed recent activity orders history */}
               <div className="border-t border-gray-150 pt-6">
                 <h4 className="text-sm font-bold text-neutral-900 mb-3 flex items-center justify-between">
                   <span>Recent Transaction Entries</span>
-                  <button onClick={() => setSubTab('orders')} className="text-xs text-amber-500 hover:underline font-bold">See All</button>
+                  <button onClick={() => setSubTab('orders')} className="text-xs text-emerald-600 hover:underline font-bold">See All</button>
                 </h4>
                 
                 {orders.length === 0 ? (
@@ -289,8 +289,8 @@ export default function UserAccount({
                         </div>
                         <div className="text-right">
                           <p className="font-black text-neutral-950">${ord.total.toFixed(2)}</p>
-                          <span className={`text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-sm ${
-                            ord.status === 'delivered' ? 'bg-green-100 text-green-800' : 'bg-amber-150 text-amber-950 animate-pulse'
+                          <span className={`text-[10px] font-bold uppercase px-2 py-0.5 rounded-xs ${
+                            ord.status === 'delivered' ? 'bg-green-100 text-green-800' : 'bg-slate-100 text-slate-800 animate-pulse'
                           }`}>{ord.status}</span>
                         </div>
                       </div>
@@ -313,7 +313,7 @@ export default function UserAccount({
                 <div className="text-center py-12 bg-gray-50 border border-dashed border-gray-200 rounded-2xl">
                   <span className="text-3xl text-gray-400 inline-block mb-2">🍽</span>
                   <p className="text-sm font-bold text-gray-500">No food receipts loaded yet.</p>
-                  <button onClick={() => setActiveTab('storefront')} className="mt-2 text-xs font-bold text-amber-600 underline hover:text-amber-800">Visit Food Storefront</button>
+                  <button onClick={() => setActiveTab('storefront')} className="mt-2 text-xs font-bold text-emerald-600 underline hover:text-emerald-700">Visit Food Storefront</button>
                 </div>
               ) : (
                 <div className="space-y-4">
@@ -324,7 +324,7 @@ export default function UserAccount({
                         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 border-b border-gray-100 pb-3 text-xs">
                           <div>
                             <span className="font-bold text-neutral-600">ID: </span>
-                            <span className="font-mono font-black text-amber-600 bg-neutral-950 px-2 py-0.5 rounded-sm shrink-0">{ord.invoiceNumber}</span>
+                            <span className="font-mono font-bold text-emerald-400 bg-slate-950 px-2.5 py-0.5 rounded-xs shrink-0">{ord.invoiceNumber}</span>
                             <span className="text-gray-400 ml-2">Ordered on {ord.date}</span>
                           </div>
                           <div className="flex items-center gap-2.5">
@@ -362,7 +362,7 @@ export default function UserAccount({
                                 onClick={() => setActiveTrackingOrderId(isTracking ? null : ord.id)}
                                 className="px-3.5 py-2 rounded-lg bg-neutral-900 hover:bg-neutral-800 text-white font-bold flex items-center gap-1 cursor-pointer transition-all"
                               >
-                                <Compass className="w-3.5 h-3.5 text-amber-400" />
+                                <Compass className="w-3.5 h-3.5 text-emerald-400" />
                                 {isTracking ? 'Close Tracking' : 'See Live Map Tracking'}
                               </button>
                             )}
@@ -371,9 +371,9 @@ export default function UserAccount({
 
                         {/* LIVE TRACKER COORDINATES COMPONENT VIEW */}
                         {isTracking && (
-                          <div className="relative mt-4 border border-amber-200 bg-amber-50/20 rounded-2xl p-4 sm:p-5 animate-fade-in space-y-4">
-                            <h4 className="text-xs font-black uppercase tracking-wider text-amber-900 flex items-center gap-1">
-                              <Compass className="w-4 h-4 text-amber-600" /> Simulated Live Drone & Rider GPS Feed
+                          <div className="relative mt-4 border border-slate-200 bg-slate-50/50 rounded-2xl p-4 sm:p-5 animate-fade-in space-y-4">
+                            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-900 flex items-center gap-1">
+                              <Compass className="w-4 h-4 text-emerald-600" /> Simulated Live Drone & Rider GPS Feed
                             </h4>
 
                             {/* Beautiful visual vector map frame */}
@@ -392,7 +392,7 @@ export default function UserAccount({
                               {/* Destination customer */}
                               <div className="absolute right-1/4 top-1/2 -translate-y-1/2 text-center">
                                 <span className="text-2xl">🏡</span>
-                                <p className="text-[8px] font-black text-amber-400 uppercase mt-1">Your location</p>
+                                <p className="text-[8px] font-bold text-emerald-400 uppercase mt-1">Your location</p>
                               </div>
 
                               {/* Moving active rider */}
@@ -543,7 +543,7 @@ export default function UserAccount({
                         <div className="flex items-center gap-2">
                           <span className="font-bold text-neutral-900 bg-gray-100 px-2.5 py-1 rounded-sm">{addr.label}</span>
                           {addr.isDefault && (
-                            <span className="text-[10px] bg-amber-100 text-amber-950 px-2.5 py-0.5 rounded-sm font-black uppercase tracking-wider">★ Standard Default</span>
+                            <span className="text-[10px] bg-emerald-50 text-emerald-800 px-2.5 py-0.5 rounded-xs font-bold uppercase tracking-wider">★ Standard Default</span>
                           )}
                         </div>
                         <h4 className="font-bold text-neutral-850 mt-3">{addr.recipient}</h4>
@@ -621,7 +621,7 @@ export default function UserAccount({
                 })}
               </div>
 
-              {/* Dynamic voucher promo lists */}
+               {/* Dynamic voucher promo lists */}
               <div className="mt-6 border-t border-gray-150 pt-6">
                 <h4 className="text-sm font-bold text-neutral-900 mb-3 flex items-center gap-1.5">
                   <Copy className="w-4 h-4 text-gray-400" /> Active Point Redemptions Vouchers
@@ -632,14 +632,14 @@ export default function UserAccount({
                 ) : (
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {activeCoupons.filter((c) => c.code.startsWith('REDEEM')).map((c, i) => (
-                      <div key={i} className="bg-amber-50 border border-amber-200 p-3.5 rounded-xl flex items-center justify-between text-xs">
+                      <div key={i} className="bg-emerald-50/50 border border-emerald-100 p-3.5 rounded-xl flex items-center justify-between text-xs">
                         <div>
                           <p className="font-extrabold text-neutral-900">Voucher Coupon code:</p>
-                          <code className="text-sm font-black font-mono text-amber-700 bg-white p-1 rounded-sm border border-amber-300 block mt-1">{c.code}</code>
+                          <code className="text-sm font-bold font-mono text-emerald-700 bg-white p-1 rounded-xs border border-emerald-200 block mt-1">{c.code}</code>
                         </div>
                         <button
                           onClick={() => copyToClipboard(c.code)}
-                          className="px-3 py-1.5 bg-neutral-950 text-white hover:bg-amber-500 hover:text-neutral-950 text-[10px] font-black uppercase rounded-lg shrink-0 transition-colors"
+                          className="px-3 py-1.5 bg-neutral-950 text-white hover:bg-emerald-600 text-[10px] font-bold uppercase rounded-lg shrink-0 transition-colors cursor-pointer"
                         >
                           {copiedCode === c.code ? 'Copied! ✔' : 'Copy Code'}
                         </button>

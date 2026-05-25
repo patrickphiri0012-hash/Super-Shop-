@@ -127,12 +127,12 @@ export default function SupportPortal({
           
           {/* Chat desk container */}
           <div className="bg-white border border-gray-150 rounded-2xl shadow-xs overflow-hidden">
-            <div className="bg-[#1b263b] text-white p-4 flex items-center justify-between border-b">
+            <div className="bg-slate-900 text-white p-4 flex items-center justify-between border-b border-slate-800">
               <div className="flex items-center gap-3">
                 <span className="text-2xl">🤖</span>
                 <div>
                   <h4 className="text-xs font-bold tracking-tight">Automated Support Assistant</h4>
-                  <p className="text-[10px] text-emerald-400">● Live Typing (inspects active orders)</p>
+                  <p className="text-[10px] text-emerald-450">● Live Typing (inspects active orders)</p>
                 </div>
               </div>
               <span className="text-[10px] font-mono bg-white/10 px-2.5 py-1 rounded-md">BOT v1.4</span>
@@ -142,8 +142,8 @@ export default function SupportPortal({
             <div className="p-4 h-64 overflow-y-auto space-y-4 bg-gray-50/50 scrollbar-thin">
               {chatHistory.map((chat, idx) => (
                 <div key={idx} className={`flex gap-2.5 max-w-[85%] text-xs ${chat.sender === 'user' ? 'ml-auto flex-row-reverse' : ''}`}>
-                  <div className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 text-sm ${
-                    chat.sender === 'user' ? 'bg-amber-500 text-neutral-950 font-bold' : 'bg-[#e0e1dd] text-[#1b263b] font-bold'
+                  <div className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 text-xs ${
+                    chat.sender === 'user' ? 'bg-emerald-600 text-white font-bold' : 'bg-slate-200 text-slate-800 font-bold'
                   }`}>
                     {chat.sender === 'user' ? 'U' : 'A'}
                   </div>
@@ -191,7 +191,7 @@ export default function SupportPortal({
           <div className="bg-white border border-gray-150 rounded-2xl p-6 shadow-xs space-y-4">
             <div>
               <h3 className="text-base font-black text-neutral-900 tracking-tight flex items-center gap-1.5">
-                <Mail className="w-4 h-4 text-amber-500" /> Lodge A Support Ticket Form
+                <Mail className="w-4 h-4 text-emerald-600" /> Lodge A Support Ticket Form
               </h3>
               <p className="text-xs text-gray-400 mt-1">If the bot is unable to settle your query, our operations coordinator will review your request manually.</p>
             </div>
@@ -220,14 +220,14 @@ export default function SupportPortal({
                   </select>
                 </div>
                 <div>
-                  <label className="block text-[10px] uppercase font-black text-gray-450 mb-1">Subject Title</label>
+                  <label className="block text-[10px] uppercase font-black text-gray-455 mb-1">Subject Title</label>
                   <input
                     type="text"
                     required
                     placeholder="e.g. Ribeye steak arrived medium well, not rare"
                     value={ticketSubject}
                     onChange={(e) => setTicketSubject(e.target.value)}
-                    className="w-full bg-gray-50 rounded-xl p-3 border border-gray-250 focus:ring-1 focus:ring-amber-500"
+                    className="w-full bg-gray-50 rounded-xl p-3 border border-gray-250 focus:outline-hidden focus:border-emerald-500"
                   />
                 </div>
               </div>
@@ -272,7 +272,7 @@ export default function SupportPortal({
                       <p className="text-[10px] text-gray-400 mt-0.5">{tk.date}</p>
                     </div>
 
-                    <span className="text-[10px] font-extrabold uppercase bg-amber-500 text-neutral-950 px-2 py-0.5 rounded-sm shrink-0">
+                    <span className="text-[10px] font-bold uppercase bg-emerald-50 text-emerald-800 px-2.5 py-1 rounded-xs shrink-0">
                       {tk.status}
                     </span>
                   </div>
@@ -289,7 +289,7 @@ export default function SupportPortal({
           {/* FAQ Accordions */}
           <div className="bg-white border border-gray-150 p-5 rounded-2xl shadow-xs">
             <h3 className="text-base font-black text-neutral-900 tracking-tight flex items-center gap-1.5 mb-4">
-              <HelpCircle className="w-4 h-4 text-[#52796f]" /> Knowledge Base Accordion FAQs
+              <HelpCircle className="w-4 h-4 text-emerald-600" /> Knowledge Base Accordion FAQs
             </h3>
 
             <div className="divide-y divide-gray-150">

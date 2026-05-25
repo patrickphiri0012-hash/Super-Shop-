@@ -172,9 +172,9 @@ export default function AdminPanel({
     <div id="admin-workspace-deck" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 animate-fade-in text-neutral-900">
       
       {/* 1. Header Banner */}
-      <section id="admin-header" className="bg-[#1b263b] border border-neutral-800 text-white p-6 rounded-3xl mb-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <section id="admin-header" className="bg-slate-900 border border-slate-800 text-white p-6 rounded-3xl mb-8 flex flex-col md:flex-row items-center justify-between gap-4">
         <div>
-          <span className="text-[10px] bg-amber-400 text-neutral-950 font-black px-3 py-1 rounded-full uppercase tracking-wider">
+          <span className="text-[10px] bg-emerald-600 text-white font-bold px-3 py-1 rounded-full uppercase tracking-wider">
             Office Desk Mode
           </span>
           <h2 className="text-3xl font-black tracking-tight mt-1">Supper Shop Admin Panel</h2>
@@ -193,10 +193,10 @@ export default function AdminPanel({
             <button
               key={tab.id}
               onClick={() => setAdminTab(tab.id as any)}
-              className={`px-3.5 py-2 rounded-xl transition-all ${
+              className={`px-3.5 py-2 rounded-xl transition-all cursor-pointer ${
                 adminTab === tab.id
-                  ? 'bg-amber-400 text-neutral-950 font-black shadow-md'
-                  : 'bg-neutral-800 hover:bg-neutral-750 text-white'
+                  ? 'bg-emerald-600 text-white font-bold shadow-md'
+                  : 'bg-slate-800 hover:bg-slate-700 text-white'
               }`}
             >
               {tab.label} {tab.valNum !== undefined && tab.valNum > 0 && <span className="bg-rose-500 text-white rounded-full px-1.5 py-0.5 text-[9px] font-black">{tab.valNum}</span>}
@@ -221,12 +221,12 @@ export default function AdminPanel({
             </div>
 
             <div className="bg-white border border-gray-150 p-5 rounded-2xl shadow-xs">
-              <div className="p-2.5 bg-amber-50 text-amber-600 rounded-xl w-10 h-10 flex items-center justify-center mb-3">
+              <div className="p-2.5 bg-emerald-100/40 text-emerald-700 rounded-xl w-10 h-10 flex items-center justify-center mb-3">
                 <ShoppingBag className="w-5 h-5" />
               </div>
-              <p className="text-xs text-gray-500 uppercase tracking-widest font-black">Pending Receivables</p>
+              <p className="text-xs text-slate-500 uppercase tracking-widest font-bold">Pending Receivables</p>
               <h4 className="text-2.5xl font-black text-neutral-950 font-sans mt-1">${metricsData.pendingFulfilment.toFixed(2)}</h4>
-              <p className="text-[10px] text-amber-600 mt-1">🍳 Kitchen preps & active riders</p>
+              <p className="text-[10px] text-emerald-600 mt-1">🍳 Kitchen preps & active riders</p>
             </div>
 
             <div className="bg-white border border-gray-150 p-5 rounded-2xl shadow-xs">
@@ -263,10 +263,10 @@ export default function AdminPanel({
                 {/* Visual custom lists bars */}
                 <div className="space-y-4">
                   {[
-                    { label: 'Gourmet Suppers', val: 1450, color: 'bg-rose-500', pct: '45%' },
-                    { label: 'Italian Specials', val: 980, color: 'bg-amber-400', pct: '30%' },
-                    { label: 'Fresh Groceries', val: 420, color: 'bg-green-500', pct: '13%' },
-                    { label: 'Healthy & Fresh', val: 380, color: 'bg-emerald-500', pct: '12%' },
+                    { label: 'Gourmet Suppers', val: 1450, color: 'bg-[#52796f]', pct: '45%' },
+                    { label: 'Italian Specials', val: 980, color: 'bg-[#84a59d]', pct: '30%' },
+                    { label: 'Fresh Groceries', val: 420, color: 'bg-emerald-305', pct: '13%' },
+                    { label: 'Healthy & Fresh', val: 380, color: 'bg-[#a3b19b]', pct: '12%' },
                   ].map((bar, i) => (
                     <div key={i} className="text-xs space-y-1">
                       <div className="flex justify-between font-bold text-neutral-800">
@@ -296,15 +296,15 @@ export default function AdminPanel({
                     <path 
                       d="M 10 140 Q 80 120, 150 70 T 250 20 T 350 110 T 390 140" 
                       fill="none" 
-                      stroke="#f4a261" 
+                      stroke="#059669" 
                       strokeWidth="3.5" 
                       strokeLinecap="round"
                     />
                     
                     {/* Interactive dot */}
-                    <circle cx="250" cy="20" r="5" fill="#e76f51" />
+                    <circle cx="250" cy="20" r="5" fill="#10b981" />
                     
-                    <text x="250" y="38" fontSize="8" fontWeight="bold" fill="#264653">Dinner Peak (8 PM)</text>
+                    <text x="250" y="38" fontSize="8" fontWeight="bold" fill="#0f172a">Dinner Peak (8 PM)</text>
                   </svg>
                   
                   {/* labels coordinates */}
@@ -334,7 +334,7 @@ export default function AdminPanel({
               onClick={() => setShowAddProduct(!showAddProduct)}
               className="px-4 py-2 bg-neutral-900 border border-neutral-900 text-white hover:bg-neutral-800 text-xs font-bold rounded-xl flex items-center gap-1.5 cursor-pointer shadow-xs"
             >
-              <Plus className="w-4 h-4 text-amber-400" /> {showAddProduct ? 'Close Form' : 'Register New Dish'}
+              <Plus className="w-4 h-4 text-emerald-400" /> {showAddProduct ? 'Close Form' : 'Register New Dish'}
             </button>
           </div>
 

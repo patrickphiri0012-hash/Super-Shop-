@@ -17,16 +17,16 @@ export default function Footer({ setActiveTab }: FooterProps) {
   };
 
   return (
-    <footer id="global-footer" className="bg-[#111827] text-white border-t border-neutral-800">
+    <footer id="global-footer" className="bg-[#0f172a] text-white border-t border-slate-800">
       
       {/* 1. Newsletter Form Subscription area */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 border-b border-neutral-800">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 border-b border-slate-800">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
           <div className="max-w-md">
-            <h4 className="text-lg font-extrabold tracking-tight">Subscribe to Chef’s Suppers Newsletter</h4>
-            <p className="text-xs text-gray-400 mt-1">Get exclusive discount vouchers, early access to dry-aged steaks, and healthy kitchen recipes weekly.</p>
+            <h4 className="text-lg font-black tracking-tight">Subscribe to Chef’s Suppers Weekly</h4>
+            <p className="text-xs text-slate-400 mt-1 font-light">Get exclusive discount vouchers, early access to dry-aged steaks, and healthy kitchen recipes weekly.</p>
           </div>
-
+ 
           <div className="w-full max-w-sm">
             <form onSubmit={handleSubscribe} className="flex gap-2 text-xs">
               <input
@@ -35,39 +35,39 @@ export default function Footer({ setActiveTab }: FooterProps) {
                 value={emailInput}
                 onChange={(e) => setEmailInput(e.target.value)}
                 placeholder="Enter your email address..."
-                className="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-2.5 placeholder-gray-500 focus:outline-hidden text-white"
+                className="w-full bg-[#0b0f19] border border-slate-800 rounded-xl px-4 py-2.5 placeholder-slate-500 focus:outline-hidden text-white focus:border-emerald-500"
               />
               <button
                 type="submit"
-                className="bg-amber-500 text-neutral-950 font-black px-5 rounded-xl hover:bg-amber-400 transition-colors shrink-0"
+                className="bg-emerald-600 text-white font-bold px-5 rounded-xl hover:bg-emerald-550 transition-colors shrink-0 cursor-pointer"
               >
                 Join List
               </button>
             </form>
             {subscribedMsg && (
-              <p className="text-[11px] text-amber-400 mt-2 font-medium font-sans leading-relaxed">
+              <p className="text-[11px] text-emerald-400 mt-2 font-medium font-sans leading-relaxed">
                 {subscribedMsg}
               </p>
             )}
           </div>
         </div>
       </div>
-
+ 
       {/* 2. Core links lists */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-1 md:grid-cols-4 gap-8 text-xs font-sans text-gray-400 leading-normal">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-1 md:grid-cols-4 gap-8 text-xs font-sans text-slate-400 leading-normal">
         
         {/* Brand details */}
         <div className="space-y-4">
           <div className="flex items-center gap-2">
-            <div className="p-2 bg-neutral-900 text-amber-500 rounded-xl">
+            <div className="p-2 bg-slate-900 text-emerald-500 rounded-xl">
               <Utensils className="w-4.5 h-4.5" />
             </div>
             <h5 className="text-[13px] font-black tracking-tight text-white">Supper Shop</h5>
           </div>
-          <p className="leading-relaxed">
+          <p className="leading-relaxed font-light">
             Metropolitan’s leading micro-zoned digital marketplace delivering A5 Wagyu meats, woodfired pizzas, raw organic vegetables, and chef-curated hot suppers directly.
           </p>
-          <div className="flex text-amber-400 text-[10px] font-black uppercase tracking-wider items-center gap-2">
+          <div className="flex text-emerald-400 text-[10px] font-bold uppercase tracking-wider items-center gap-2">
             <span>🟢 All Systems Active</span>
             <span>•</span>
             <span>Grade-A Sourced</span>
@@ -148,7 +148,7 @@ export default function Footer({ setActiveTab }: FooterProps) {
       </div>
 
       {/* 3. Safety Badges Copyright bar */}
-      <div className="bg-[#0b0f19] py-6 border-t border-neutral-900">
+      <div className="bg-[#0b1329]/60 py-6 border-t border-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-gray-500 gap-4">
           <p>© 2026 Supper Shop Corporation Inc. All privileges and gourmet recipes reserved.</p>
           
